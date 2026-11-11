@@ -206,17 +206,11 @@ nav .btn { min-height: 44px; font-size: 16px; padding: 8px 18px; }
 .field-head { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(24px, 5vw, 80px); align-items: end; margin-bottom: 44px; }
 .field-head h2 { font-size: clamp(50px, 7vw, 104px); }
 .field-head p { color: var(--muted); font-size: 19px; max-width: 48ch; }
-.gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(150px, 17vw, 240px); grid-auto-flow: dense; gap: 10px; }
+.gallery { display: grid; grid-template-columns: 2fr 1fr; grid-auto-rows: clamp(320px, 38vw, 540px); gap: 10px; }
 .gallery figure { margin: 0; position: relative; overflow: hidden; border-radius: 8px; background: var(--panel); }
 .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; filter: saturate(.9) contrast(1.05); }
 .gallery figure:hover img { transform: scale(1.04); }
 .gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 14px 12px; font-size: 14px; font-weight: 600; background: linear-gradient(transparent, rgba(4, 10, 7, .85)); }
-.g-a { grid-column: span 2; grid-row: span 2; }
-.g-b { grid-column: span 1; grid-row: span 2; }
-.g-c { grid-column: span 1; grid-row: span 1; }
-.g-d { grid-column: span 1; grid-row: span 1; }
-.g-e { grid-column: span 2; grid-row: span 1; }
-.g-f { grid-column: span 2; grid-row: span 1; }
 .refs { margin-top: clamp(48px, 7vw, 80px); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: start; }
 .refs h3 { font-size: clamp(34px, 4vw, 52px); }
 .refs ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; grid-column: span 2; border-top: 1px solid var(--line); }
@@ -224,8 +218,9 @@ nav .btn { min-height: 44px; font-size: 16px; padding: 8px 18px; }
 .refs li b { font-family: var(--display); font-weight: 800; font-size: 26px; text-transform: uppercase; color: var(--green); line-height: 1; }
 .refs li span { color: var(--muted); font-size: 15px; }
 @media (max-width: 860px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
-  .g-a { grid-column: span 2; grid-row: span 2; } .g-b { grid-column: span 1; grid-row: span 2; } .g-c, .g-d { grid-column: span 1; } .g-e, .g-f { grid-column: span 2; }
+  .gallery { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .gallery figure { aspect-ratio: 4 / 3; }
+  .gallery .g-b { aspect-ratio: 3 / 4; }
   .refs ul { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .gallery img { transition: none; } }
@@ -547,11 +542,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
     </div>
     <div class="gallery">
       <figure class="g-a"><img src="img/grupo-2.webp" alt="Grupo de alumnos con sus certificados al cerrar una formación presencial de High Fitness" width="1400" height="1050" loading="lazy"><figcaption>Cierre de una formación presencial</figcaption></figure>
-      <figure class="g-b"><img src="img/correccion.webp" alt="Docente de High Fitness corrigiendo la técnica de un alumno" width="960" height="1280" loading="lazy"><figcaption>Corrección de técnica, uno por uno</figcaption></figure>
-      <figure class="g-c"><img src="img/clase-llena.webp" alt="Clase presencial de High Fitness con la sala llena de entrenadores" width="1400" height="1050" loading="lazy"><figcaption>Sala llena en una capacitación</figcaption></figure>
-      <figure class="g-d"><img src="img/sala.webp" alt="Alumnos practicando en el suelo durante un curso presencial" width="1080" height="1080" loading="lazy"><figcaption>Práctica en el gimnasio</figcaption></figure>
-      <figure class="g-e"><img src="img/grupo-1.webp" alt="Egresados de un curso de High Fitness con sus certificados" width="1280" height="960" loading="lazy"><figcaption>Nueva camada de egresados</figcaption></figure>
-      <figure class="g-f"><img src="img/grupo-3.webp" alt="Grupo de alumnos de distintos países en una formación de High Fitness" width="960" height="1280" loading="lazy"><figcaption>Alumnos de distintos países</figcaption></figure>
+      <figure class="g-b"><img src="img/curso-2.webp" alt="Docente de High Fitness dando clase a un grupo de entrenadores en un curso presencial" width="1050" height="1400" loading="lazy"><figcaption>Clase en una formación presencial</figcaption></figure>
     </div>
     <div class="refs">
       <h3>Referencias de High Fitness</h3>
